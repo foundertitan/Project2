@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913326708815",
+    "project_id": "aratigiriproject2",
+    "storage_bucket": "aratigiriproject2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913326708815:android:c491efd9611a2ce9c3f23a",
+        "android_client_info": {
+          "package_name": "com.arati_giri.project2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXAEw7Vd4rf7zc9dvoJphyj_ezoZkk0Es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
