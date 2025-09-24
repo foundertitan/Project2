@@ -6,20 +6,41 @@ It provides a smooth shopping experience—from browsing products to secure sign
 ---
 
 ## ✨ Features
-1. **Home Screen (`MainActivity`)**  
-   Browse a curated list of shoes with images and prices.
-2. **Product Listing (`ProductActivity`)**  
-   View all available shoes with easy navigation.
-3. **Product Details (`DetailActivity`)**  
-   See full details such as size, description, and price.
-4. **Order Confirmation (`ThankYouActivity`)**  
-   Displays a thank-you page after successful purchase.
-5. **Secure Authentication**  
-   Uses **Firebase Authentication** for user sign-up and sign-in.
-6. **Cloud Storage for Images**  
-   Shoe images are stored and served via **Firebase Storage**, ensuring fast and reliable delivery.
-7. **Realtime Database / Firestore** *(if applicable)*  
-   Product data can be managed through Firebase’s database services for easy updates.
+
+- **Modular Architecture with Activities**  
+  - `BaseActivity.java` centralizes common UI elements (toolbar, navigation) and reduces duplicate code across activities.
+  - `MainActivity.java` loads the home screen and retrieves product data/images from Firebase.
+
+- **Dynamic Product Loading**
+  - `ProductActivity.java` fetches shoe listings and images stored in **Firebase Storage**.
+  - Uses RecyclerView/Adapter pattern for efficient scrolling and updates.
+
+- **Detailed Product View**
+  - `DetailActivity.java` receives product data through Intent extras and displays details such as price, description, and size.
+  - Implements click listeners for adding to cart/checkout.
+
+- **Secure User Authentication**
+  - Firebase Authentication code handles sign-up, sign-in, and session management.
+  - Email/Password provider enabled; logic included to manage user state and error handling.
+
+- **Order Confirmation Workflow**
+  - `ThankYouActivity.java` confirms orders and displays a “Thank You” screen after purchase.
+  - Uses Intent flags to clear previous activities and prevent navigating back to checkout.
+
+- **Firebase Integration**
+  - **Firebase Storage** for shoe images.
+  - **Firebase Realtime Database / Firestore** (if configured) for product details.
+  - `google-services.json` integrated with Gradle for automatic Firebase initialization.
+
+- **Material Design UI**
+  - XML layouts use Material components for a clean, modern look.
+  - Consistent theming and responsive layouts.
+
+- **Clean Code Practices**
+  - Separation of concerns via Activity classes.
+  - Reusable helper methods and clear lifecycle management.
+  - Proper null-checks and error handling when loading images/data.
+
 
 ---
 
